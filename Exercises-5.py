@@ -228,68 +228,68 @@
 #     numbers.append(num)
 # print(numbers)
 
-grades = [85, 72, 90, 55, 100, 63, 48, 77]
-while True:
-    print("""
-===== Grades Management =====
+# grades = [85, 72, 90, 55, 100, 63, 48, 77]
+# while True:
+#     print("""
+# ===== Grades Management =====
 
-1. Show all grades
-2. Add a grade
-3. Search for a grade
-4. Remove a grade
-5. Show passing grades
-6. Show failing grades
-7. Show highest and lowest grade
-8. Show average grade
-9. Show first 3 grades
-10. Show grades in reverse
-0. Exit
-""")
-    choice = input("choice: ")
-    if choice == "1":
-        for grade in grades:
-            print(grade)
-    elif choice == "2":
-        grade = int(input("grade: "))
-        grades.append(grade)
-    elif choice == "3":
-        grade = int(input("grade: "))
-        for i in range(len(grades)):
-            if grades[i] == grade:
-                print(i)
-    elif choice == "4":
-        grade = int(input("grade: "))
-        for i in range(len(grades)):
-            if grades[i] == grade:
-                grades.pop(i)
-                print("Successfully deleted")
-                break
-    elif choice == "5":
-        new_grades1 = [grade for grade in grades if grade >= 60]
-        print(new_grades1)
-    elif choice == "6":
-        new_grades2 = [grade for grade in grades if grade < 60]
-        print(new_grades2)
-    elif choice == "7":
-        small = grades[0]
-        big = grades[0]
-        for grade in grades:
-            if grade <small:
-                small = grade
-            if grade > big:
-                big = grade
-        print(big)
-        print(small)
-    elif choice == "8":
-        count = 0
-        for grade in grades:
-            count += grade
-        print(count/len(grades))
-    elif choice == "9":
-        print(grades[:3])
-    elif choice == "10":
-        print(grades[::-1])
-    elif choice == "0":
-        exit()
-    else:
-        print("0-10 only")
+# 1. Show all grades
+# 2. Add a grade
+# 3. Search for a grade
+# 4. Remove a grade
+# 5. Show passing grades
+# 6. Show failing grades
+# 7. Show highest and lowest grade
+# 8. Show average grade
+# 9. Show first 3 grades
+# 10. Show grades in reverse
+# 0. Exit
+# """)
+#     choice = input("choice: ")
+#     if choice == "1":
+#         for grade in grades:
+#             print(grade)
+#     elif choice == "2":
+#         grade = int(input("grade: "))
+#         grades.append(grade)
+#     elif choice == "3":
+#         grade = int(input("grade: "))
+#         for i in range(len(grades)):
+#             if grades[i] == grade:
+#                 print(i)
+#     elif choice == "4":
+#         grade = int(input("grade: "))
+#         for i in range(len(grades)):
+#             if grades[i] == grade:
+#                 grades.pop(i)
+#                 print("Successfully deleted")
+#                 break
+#     elif choice == "5":
+#         new_grades1 = [grade for grade in grades if grade >= 60]
+#         print(new_grades1)
+#     elif choice == "6":
+#         new_grades2 = [grade for grade in grades if grade < 60]
+#         print(new_grades2)
+#     elif choice == "7":
+#         small = grades[0]
+#         big = grades[0]
+#         for grade in grades:
+#             if grade <small:
+#                 small = grade
+#             if grade > big:
+#                 big = grade
+#         print(big)
+#         print(small)
+#     elif choice == "8":
+#         count = 0
+#         for grade in grades:
+#             count += grade
+#         print(count/len(grades))
+#     elif choice == "9":
+#         print(grades[:3])
+#     elif choice == "10":
+#         print(grades[::-1])
+#     elif choice == "0":
+#         exit()
+#     else:
+#         print("0-10 only")
